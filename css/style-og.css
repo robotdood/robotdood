@@ -1,0 +1,339 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html, .root {
+	font-size: 18px;
+	line-height: 23px;
+}
+body, .article {
+	font-family: 'Karla', sans-serif;
+	font-size: 1em;
+	line-height: 1.27777778em;
+}
+h1, .h1 {
+	font-size: 4.22222222em;
+	line-height: 1.21052632em;
+	margin-top: 0.30263158em;
+	margin-bottom: 0.60526316em;
+}
+h2, .h2 {
+	font-size: 2.61111111em;
+	line-height: 1.46808511em;
+	margin-top: 0.4893617em;
+	margin-bottom: 0.4893617em;
+}
+h3, .h3 {
+	font-size: 1.61111111em;
+	line-height: 1.5862069em;
+	margin-top: 0.79310345em;
+	margin-bottom: 0em;
+}
+h4, .h4 {
+	font-size: 1em;
+	line-height: 1.27777778em;
+	margin-top: 1.27777778em;
+	margin-bottom: 0em;
+}
+h5, .h5 {
+	font-size: 1em;
+	line-height: 1.27777778em;
+	margin-top: 1.27777778em;
+	margin-bottom: 0em;
+}
+p, ul, ol, pre, table, blockquote {
+	margin-top: 0em;
+	margin-bottom: 1.27777778em;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+/* Let's make sure all's aligned */
+hr, .hr {
+	border: 1px solid;
+	margin: -1px 0;
+}
+a, b, i, strong, em, small, code {
+	line-height: 0;
+}
+sub, sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+.container {
+	display: grid;
+	grid-template-columns:
+		[full-start] minmax(1em, 1fr)	[main-start] minmax(0, 30em) [main-end]	minmax(1em, 1fr) [full-end];
+	overflow-x: hidden;
+}
+
+.container > * {
+	grid-column: main;
+}
+
+.container-splash {
+	grid-column: full;
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 900px) {
+}
+
+header {
+	grid-row: 1;
+	background:
+		radial-gradient(circle, rgba(255,237,188, .3), rgba(237,66,100, .3)), url("../images/flowerz.jpg");
+	background-size: cover;
+	background-position-y: bottom;
+	background-position-x: center;
+	height: 100vh;
+	text-align: center;
+	padding-top: 3rem;
+	-webkit-clip-path: polygon(0 0%, 100% 0, 100% 98%, 0% 99%);
+	clip-path: polygon(0 0%, 100% 0, 100% 98%, 0% 99%);
+}
+
+#header-logo {
+	width: 90%;
+	max-width: 800px;
+}
+
+h1 { display: none; }
+
+h4 { margin: 0; padding-top: 1rem; }
+
+input, button { font-family: 'Karla', sans-serif; }
+#mc_embed_signup {
+	background: #fff;
+	border-radius: 5px;
+	align-self: baseline;
+	width: 80%;
+	margin: auto;
+}
+#mc_embed_signup_scroll { margin: auto; }
+#mc_embed_signup_scroll > * {
+	display: inline-block;
+}
+#mc-field-group { width: 100%; }
+label { display: none; }
+input {
+	display: block;
+	border: none;
+	border-bottom: 1px solid rgb(237, 66, 100);
+	padding: 10px 0px 5px 5px;
+	color: #000;
+	width: 100%;
+	margin: .5rem 0 1rem 0;
+
+	-webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+	/* underline effect */
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, rgb(237, 66, 100) 4%);
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, rgb(237, 66, 100) 4%);
+	background-position: -200px;
+	background-size: 200px 100%;
+	background-repeat: no-repeat;
+}
+
+input:focus {
+	background-position: 0px 0px;
+	box-shadow: none;
+	outline: none;
+}
+
+input::-webkit-input-placeholder, input::-moz-placeholder, form > button {
+	font-family: 'Karla', sans-serif;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder, input:focus::-moz-input-placeholder, input:valid::-moz-input-placeholder {
+	color: #000;
+	font-size: 11px;
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+	visibility: visible !important;
+}
+#mc-embedded-subscribe {
+	padding: 10px 5px 5px 5px;
+	margin-top: 0;
+}
+
+.navcolor {
+	background: transparent; /* rgb(237,66,100); */
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+nav {
+	background: transparent; /* rgb(237,66,100); */
+	z-index: 5;
+	height: 4rem;
+	line-height: 4rem;
+	position: fixed;
+	bottom: 0px;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+}
+li {
+	display: inline-block;
+	padding-right: 1em;
+	text-transform: lowercase;
+}
+li a {
+	text-decoration: none;
+	transition: 0.3s;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,.6);
+}
+
+#social {
+	display: none;
+	z-index: 5;
+	background: #333;
+	font-size: 1.5em;
+}
+
+section {
+	padding: 2rem 0rem;
+}
+
+#bio {
+	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+#videos {	padding-top: 0; }
+
+#vid-container { width: 90%; margin: auto;}
+
+#tour { grid-column: full; }
+#tour .bit-button { padding: 1.5em 0; }
+
+#press {
+	column-count: 1;
+	column-gap: 20px;
+	max-width: 1024px;
+	margin: auto;
+	padding: 0 30px 30px 30px;
+}
+
+#press h4 { display: none; padding: 0 0 30px 0; }
+
+#press p { margin: 0; }
+
+figure, blockquote { margin: 0px; padding: 0px; }
+figure { display: inline-block; width: 100%; padding-bottom: 30px; }
+
+figcaption {
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 5px
+}
+
+cite a { color: rgb(237, 66, 100); text-decoration: none; }
+
+footer {
+	background: rgba(237,66,100, 1); /* url("../images/tangerine-cutout.png") no-repeat;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 2rem, center;
+	height: 500px; */
+	text-align: center;
+	padding-top: 2rem;
+	-webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+	overflow: hidden;
+}
+
+footer ul,
+footer li {	padding: 0; }
+footer p { text-transform: uppercase; }
+
+#footer-container { margin-bottom: 3rem; }
+
+footer img {
+	display: block;
+	width: 100vw;
+	transform:scale(1.5);
+}
+
+/* lightweight responsive youtube embed */
+.youtube {
+	position: relative;
+	padding-bottom: 56.23%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	background: #000;
+	margin: 5px;
+}
+
+.youtube iframe,
+.youtube object,
+.youtube embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: transparent;
+}
+
+.youtube img {
+	bottom: 0;
+	display: block;
+	left: 0;
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;
+	height: auto;
+	cursor: pointer;
+	-webkit-transition: .4s all;
+	-moz-transition: .4s all;
+	transition: .4s all;
+}
+
+.youtube img:hover {
+	-webkit-filter: brightness(75%);
+}
+
+.youtube .play {
+	height: 72px;
+	width: 72px;
+	left: 50%;
+	top: 50%;
+	margin-left: -36px;
+	margin-top: -36px;
+	position: absolute;
+	background: url("../images/play.png") no-repeat;
+	cursor: pointer;
+}
